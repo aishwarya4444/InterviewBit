@@ -1,0 +1,8 @@
+# ignore idea directory
+.idea/
+
+# ignore class files of JAVA
+*/*/*.class
+
+# ignore a.out files of C++
+*/*/a.out

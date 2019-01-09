@@ -2,13 +2,20 @@
 
 // https://www.geeksforgeeks.org/lexicographic-rank-of-a-string/
 
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+class Solution {
+  public:
+    int findRank(string );
+};
+
 int fact(int n) {
   return n<2 ? 1 : (n*fact(n-1))%1000003;
 }
 
 int Solution::findRank(string A) {
-  // A = 'DTNGJPURFHYEW'
-
   int i, j, count, rank=1, N=A.size();
 
   for(i=0;i<N-1;i++) {
@@ -22,4 +29,10 @@ int Solution::findRank(string A) {
     rank += (count*fact(N-1-i))%1000003;
   }
   return (rank)%1000003;
+}
+
+int main(void ) {
+  Solution s;
+  cout<<s.findRank("DTNGJPURFHYEW")<<'\n';
+  return 0;
 }
